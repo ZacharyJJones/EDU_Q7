@@ -1,0 +1,16 @@
+Discrete Math Notes
+
+Tautalogy: An expression which will always evaluate to true
+Contradiction: An expression which will always evaluate to false
+
+= Symbols
+AND is: ^ (upward arrow)
+OR is:  V (downward arrow)
+NOT is: ¬ (special symbol, can use "!" for plain text?)
+
+= De Morgan's Laws
+
+How distributing a negation into parentheses works:
+
+>> ¬(p V q) equivalent_to (¬p ^ ¬q)
+

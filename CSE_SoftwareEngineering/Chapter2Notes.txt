@@ -1,0 +1,55 @@
+Chapter 2 Notes - Software Processes
+======================================
+
+[2.1]
+
+All software development has common factors of product spec, design/planning, implementation, testing and maintenance
+
+Consider which aspects of your processes are worthy of change - lots of frameworks to live by, makes sense to pick the best ones for what you are doing
+
+
+Process type notes
+- Waterfall is good for measuring progress as % of known work needed completed
+- Incremental development, making program then improving in waves, feels like the most natural way to do things. Try changing something -> see how it is received -> try changing something. Needs to focus on minimum viable products, which is good, so that things keep moving.
+
+[2.2]
+
+Even with waterfall methodology, steps in dev lifecycle tend to feed information into each other (sometimes backwards). Typically things happen more in parallel than one at a time, so it makes sense to get information from one area and apply it to another.
+
+[2.3]
+
+Testing is best when focusing on specific parts of a whole. Features, functions, services. Then other tests for things which are connected in multiple ways. Just ensuring that everything works baseline gives good information on whether other failures come from bad components or bad behavior from the more complicated areas of code
+
+[2.3]
+
+To avoid the time and effort costs of refactoring, use a kene eye to determine what is needed for prototype builds. What to keep and what to leave out - what is necessary to ensure customer and developer are in agreement of what it should DO - but the usage can change significantly with some features added or removed.
+- Drawback is inevitable lack of documentation for prototype -- it is not intended to stick around a long time. Sadly, software always sticks around and is used far longer than initially planned for - temporary means permanent and permanent means nothing.
+
+Spiral methodology which focuses on risk explicity intentionally makes many prototypes - reduce risk by making less initial effort which would need to be changed. Follows normal iterative style otherwise, but the shape itself encourages moving forward and not regressing backwards.
+
+[2.4]
+
+Rational Unified Process for software development: consider your project from multiple valuable perspectives rather than rigidity of other lifecycles. Similar to iterative but with the considerations of perspective it is more abstract and malleable.
+
+===========================
+
+Excercises:
+
+===
+2.4 --Suggest why it is important to make a distinction between developing the user requirements and developing system requirements in the requirements engineering process.
+
+User requirements are what the eventual end-user needs. That user interacts with a black box that is The Software and their needs must be met as that is the point of the software.
+
+System requirements can be tools that facilitate making The Software or systems of work which allow for the efficient creation/development of the software. These requirements will typically be unknown to the end user and exist simply to benefit the development team as they create the product.
+
+Noting efficiencies to be gained in development can save on costs and ultimately improve the quality of the product.
+
+
+===
+2.6 -- Explain why change is inevitable in complex systems and give examples (apart from prototyping and incremental delivery) of software process activities that help predict changes and make the software being developed more resilient to change.
+
+"Everybody has a plan until the 3rd-party tool updates". Humans are imperfect and their plans equally so. Plans will have to change as the scope of work needed for functions is realized fully or as the customer returns to say that mistakenly some things were left out of the design spec and some things were left in that were not wanted. Understanding that such changes are a fact of software development and working in such a way to accomodate those gracefully is a major skill.
+
+Certain principles of development such as appropriate levels of abstraction or obfuscated access to class members - such as through getters/setters - are ways to make the software more resilient to change. 
+
+

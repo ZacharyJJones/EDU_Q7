@@ -1,0 +1,66 @@
+ CSE Class 2 Notes
+=-=-=-=-=-=-=-=-=-=
+
+1. Understanding software project management lets you better understand software engineering. It's all about the processes!
+
+# Plan
+ - Investigation - figuring out needs and feasibility
+ - Project Charter - Putting together solid concepts of plan and scope to share with potential sponsors. Budget, success criteria, scope, purpose.
+ - Project Plan - Detailed requirements, associated risks (and mitigation), understanding stakeholders and how you will communicate to them (people who are putting up the risk for the project, or on the hook for things that can fail. These are the people that are "paying" for the project. Anyone that is going to be impacted by the project), also testing and QA plans
+ - Then... PROJECT KICKOFF!! WOOHOO
+
+=> Potential issue: Scope creep! Needs to be communicated with others as it happens, and try to set harder boundaries to avoid endless scope/feature creep
+
+
+# Design
+ - Setting up architecture for software and database(s)
+ - UX/UI design
+ - Choices of tech, dev tools, other models or solutions to use and bring in to the project.
+
+=> Potential issue: Disconnect/Disagreements between design team and implementation team. Changes desired by dev team can go in via change requests, usually you want to follow guidelines from design team however.
+
+
+# Implementation
+ - Where the software is developed, features are built and ideas become reality
+ - Project requirements are analyzed, reviewed for what changes still need to happen
+
+=> Potential issue: Putting a lot of work into something, but that work goes to lower priority item and may not make it in any time soon. Proper prioritization is very important here, put effort towards things that are wanted most. Protect your heart! It'll probably hurt when your work feels wasted. Just save the work you did and use it as you can - it was a learning opportunity you can draw from in the future.
+
+
+# Test
+ - Manual & automated testing - make sure everything is working!
+ - Testing plan is here to make sure we are doing the different types of testing that we want to be doing
+ - Verification of project requirements met & other Compliance-type requirements
+
+=> Potential issue: Might not be testing the right things! Far edge cases with low impact for example, might be a bad use of time when you can be identifying and solving big issues that crash or lose functionality for many people. Prioritization and understanding of severity do wonders here
+
+
+# Deploy
+ - Production deployment - the copy of software that the users are interacting with
+ - Collect user feedback
+ 
+
+=> Potential issue: You can never plan for everything that the users will throw at the software! They will find errors you never imagined - just try to cover as much as you can, as effectively as you can.
+
+
+# Maintain
+
+=> Potential issue:
+
+=================
+
+Development Methodologies
+
+1. Waterfall - works best with clear + fixed requirements with extensive planning done upfront. Or projects that involve govt. regulations or legal constraints
+
+2. Iterative - Initial planning is less monumental, then enters cyle of creating features and re-evaluating the software until requirements are met and project can be deployed.
+
+3. Spiral - combines waterfall and interative, focusing on risk-driven development. Good for complex or risk-prone projects, as each phase in cycle/spiral includes a step of risk analysis
+
+4. Agile - Iterative methodology, is the general standard. Focused on speed and fast cycles called "sprints". Tracks features via a backlog, with regular meetings (standups) to communicate blocking issues and progress. Works well for projects focused highly on the customer.
+
+
+
+
+
+

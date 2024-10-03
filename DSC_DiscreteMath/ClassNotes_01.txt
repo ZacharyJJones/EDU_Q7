@@ -12,5 +12,8 @@ NOT is: ¬ (special symbol, can use "!" for plain text?)
 
 How distributing a negation into parentheses works:
 
+
+
+
 >> ¬(p V q) equivalent_to (¬p ^ ¬q)
 

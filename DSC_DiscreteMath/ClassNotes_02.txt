@@ -1,0 +1,232 @@
+Discrete Math Class 2 Notes
+=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Set Theory
+
+Set A = { a, b, c, d, e }
+
+Sets contain elements. Elements do not have to be similar types - numbers, creatures, concepts, etc.
+
+SETS DO NOT CARE ABOUT ORDER AT ALL. NOT IN THE SLIGHTEST. They are always unordered.
+
+The purpose of a set is simply to say "this given element is included in this set".
+- For that reason, duplicate elements in a set can be ignored (you don't have to say "yes this thing is included" twice - it is already known from the first time.)\
+
+The logical statement for "element is contained in a set" is <element> _E_ <set>, where the "E" is a fancy mathmatical E and does not include the underscores.
+- Similarly, the statement for "not contained" is "<element> _E/_ <set>", where the "E" is mathmatical and fancy but ALSO has a line going through it from top left to bottom right.
+
+Refer to Set A from above. the statement "c _E_ A" is true -- element "c" is contained in the set "A".
+
+When you have a set with no elements, it is called an "Empty Set" or a "Null Set".
+
+
+===============
+Cardinality, Finite vs Infinite.
+
+Sets can either be finite or infinite. If a set is not finite, then it is infinite.
+-> The distinction is usually pretty clear. "All real numbers" is an infinite set. "All real numbers between 0 and 100" is finite.
+
+Finite sets have a property called "Cardinality" which is an integer that says how many elements are contained in the set.
+
+e.g. Set B = { Apple, Dog, 55, 0.42, Camera }. The cardinality of B is 5. This will typically be written as "|B| = 5"
+
+The Cardinality of an empty set is 0 - {}
+The cardinality of a set that contains only an empty set is 1 - { {} }
+
+=============
+When a set contains a very large number of elements, you might not always want to include every element. That is where ellipses are used.
+- When you use this technique to omit a sequence in favor of brevity, YOU MUST MAKE THE PATTERN OF THE SEQUENCE CLEAR so that the omitted elements can be inferred.
+
+Examples:
+- Beta = {1, 3, 5, ..., 99} => All is good! Sequence of odd numbers can be inferred from 1 through 99.
+- Gamma = {3, 6, 9, 12, ...} => All is good, this infinite set of all positive integer multiples of 3.
+
+============
+Set Equality
+
+Two sets are equal if they have exactly the same elements. Again, sets are always unordered so it does not matter if their elements are listed in a different way - if all elements are the same, then the sets are equal.
+
+
+=============
+Set Builder Notation
+
+Example -->  G = { <var> _E_ <other_set> | <conditions relating to x> }
+
+You can build sets by saying "this is this other set, BUT <conditions>". So "all real numbers BUT only those which are >= 100".
+- n_100 = { x _E_ REAL_NUMBERS: x >= 100 }
+
+Those special predefined sets are typically defined by capital letters with doubled vertical lines.
+
+> Integers == Z == All positive and negative whole numbers
+> Natural  == N == All positive integers
+> Real     == R == All numbers on the number line
+> Rational == Q == All numbers which can be expressed as a fraction "a/b" where a and b are integers and b != 0.
+> Irrational == I == All real numbers which can't be expressed as a fraction the way Rational numbers are.
+
+
+=========
+Subsets
+- Venn Diagrams are often used to visually describe what elements are contained or shared between sets.\
+- WHen you draw such a Venn diagram, you put the elements and circle diagrams inside a larger box labelled "U". "U" is a symbol that describes the universal set - that is, the set which contains every element being described.
+
+Consider:
+ A = {1, 2, 3, 4, 5}
+ B = {1, 3, 4}
+ C = {3, 4, 1}
+
+B is a subset of A, because every element in B is an element in A.
+ - In fact, B is referred to as a "proper" subset, because A contains elements that B does not.
+
+C is a subset of B, but is not a "proper" subset because B does not have any other elements that C does not have in itself.
+ - In this case, it is more efficient to say the sets are equal. Two sets are equal ONLY if both sets are subsets of the other. That is to say, every element in one set is also present in the other, and NEITHER set has any additional elements.
+
+================
+Sets which contain sets
+
+Consider:
+ A = { {1,2}, EMPTY_SET, {1,2,3}, {1} }
+
+|A| = 4
+ 1 = {1,2}
+ 2 = EMPTY_SET
+ 3 = {1,2,3}
+ 4 = {1}
+
+Note that "1 _E_ A" is false - A does not contain the element "1". It contains a set of length 1 which contains the element "1".
+
+"{1} _E_ A" is true - A contains a subset which has a single element of "1".
+
+>>>> This next part is complicated!
+
+{1} IS NOT a subset of A. Consider:
+ D = {a, b, c, {1}}
+ E = {1}
+
+The definition of E is a set that contains the element "1".
+E is not a subset of D in the same way that {1} is not a subset of A.
+-> {1} is the definition of a set that only contains the element "1". 
+-> {{1}} is a subset of A, because {{1}} contains a set which contains only the element "1", and A contains a set which contains only the element "1".
+
+
+===================
+Set Operations
+
+These are pretty similar to database operations.
+
+"JOIN" is written as a "U" symbol. This creates a set which has all elements of each set (remember that duplicates are ignored/discarded)
+ - {Dog, Cat, Lizard} _U_ {Bird, Dog, Bee} == {Dog, Cat, Lizard, Bird, Bee}
+
+"INTERSECT" is written as an upside down "U" symbol. This creates a set which has only the elements shared between BOTH sets.
+ - {a,b,c,d,e} INTERSECT {c,e,f,g,h} == {c,e}
+
+"DIFFERENCE" is written as a minus sign "-" between two set identifiers. This creates a set containing all elements of left side MINUS any elements shared in the right side. 
+ - {1,2,3,4}-{1,3,5} == {2,4}
+
+
+
+
+================
+Supersets / Power Sets
+
+Often you need to test all combinations of a set's elements to see if they satisfy some property.
+- The set "B" that contains all combinations of some other set "A" is called the Superset or Power Set of A.
+
+e.g.
+ - A = { a, b, c }
+ - B = { {}, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c} }
+
+Supersets always contain an empty set (an element with none of the original's elements) and the set itself
+
+Special cases:
+ - Superset of the empty set is... the empty set! P(_0_) = {_0_}
+ - Superset of a set containing only the empty set:
+  -- P({_0_}) = { _0_, {_0_} }
+
+
+===============
+Cartesian Products / Tuples / Comparing Ordered Sets
+
+Cartesian products are similar to supersets in that you get a bunch of permutations - combinations of each element in one set with each element in another set. When you have a chain of cartesian products, they are evaluated simultaneously together as one result (unless there are parentheses)
+
+Consider:
+ - A = { 1, 2, 3, ..., 1000 } -> Representing the set of all students enrolled at a university
+ - B = { a, b, c, ..., z } -> Representing the set of all courses offered at that university
+
+
+The Cartesian product A x B consists of all the ordered pairs of the form (a, b), where
+a is a student at the university and b is a course offered at the university. One way to use that set would be to represent all possible enrollments of students in courses at the university.
+
+Your result would look like this:
+ - A x B = { (a,b) | a _E_ A ^ b _E_ B } == { (1,a), (1,b), (1,c), ..., (1,z), (2,a), (2,b), ..., (1000,z) }
+
+Because of how tuples are considered ordered when evaluated, (a,b) is not equal to (b,a) UNLESS a == b.
+
+Note: A x B x C is NOT the same as (A x B) x C
+
+You can use exponents in notation to shorten cases such as "A x A x A", which can be written as A^3
+
+============
+Truth Sets / Quantifiers
+
+You can take a set and get a subset out of it for only elements that satisfy some condition. Basically back to Set operations, but using logical comparisons and evaluations to determine what gets added.
+
+
+
+================
+Chapter 2.2 - Set Operations
+==============================
+
+A = {1, 2, 3, 4, 5}
+B = {2, 4, 6, 8, 10}
+C = {1, 3, 5, 7, 9}
+D = {1, 2, 6, 7, 10}
+
+
+Union (Mathmatical U shape) - Joining two sets together (duplicate elements are ignored, as always)
+- A <union> D = {1, 2, 3, 4, 5, 6, 7, 10}
+
+
+Intersection (Upside down mathmatical U) - The elements which are contained by each set
+- A <intersect> B = {2, 4}
+- B <intersect> C = { } (the empty set). This means these sets are "disjoint" - as in, they have no elements in common.
+
+
+
+>> You don't need parentheses for union / intersect statements because the order of them being done as a group does not matter.
+
+
+
+Difference (or Complement) (minus symbol OR "\") - Elements of one set EXCEPT for anything which is found in the second set
+- D <minus> A == { 6, 7, 10 }
+- The complement of a set with no given reference is the complement of that set to the universal set. "The complement of A" means "the complement of A with respect to U" means "U-A".
+ -->> When writing this, it appears as the set's name/letter with a line above it. such as...
+_
+A == U-A
+
+
+
+==========
+Set Identities
+
+Identity Laws: 
+- A <intersect> U == A
+- A <union> _EmptySet_ == A
+
+Domination Laws: 
+- A <union> U == U
+- A <intersect> _EmptySet_ == _EmptySet_
+
+Complement Laws:
+- A <union> (not)A == U
+- A <intersect> (not)A == _EmptySet_
+
+De Morgan's Laws:
+- (not)(A <union> B) == (not)A <intersect> (not)B
+- (not)(A <intersect> B) == (not)A <union> (not)B
+
+
+===========
+How Computers Calculate Set Unions/Intersects
+
+They convert them into bit strings first, then use binary/bit operations to figure out those areas of overlap
+

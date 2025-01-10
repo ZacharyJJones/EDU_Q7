@@ -1,0 +1,53 @@
+Chapter 8 Notes
+=-=-=-=-=-=-=-=
+Software Testing (hey, that's my job!)
+- Good practice: at least 1 test for each requirement in document, plus tests for all system features and feature combos.
+
+8.1 Development Testing
+
+Unit testing: testing indificual program components such as methods or classes
+
+Test cases have 3 parts:
+1. Arrange (get your data for testing)
+2. Act (call the functions or change the state)
+3. Assert (check conditions to ensure expected behavior occurs)
+
+The Beauty Of Mocks:
+- No need to rely on external services such as databases (can be slow!)
+- Easy simulation of rare events or bad data
+
+Good program inputs, partitions:
+- Partitions are the boundaries of "similar" data values. Example being "all positive numbers"
+- Testing boundaries of those partitions, as well as midpoints, are a good starting point for testing. Boundaries are often atypical values for a program to receive.
+
+
+8.2 Test-Driven Development: Write tests while you write code, don't move on until it passes. Ensures you have plenty of tests so you avoid regression tests down the road.
+
+
+8.3 Release Testing
+- Black-box testing, separate from development team.
+- Ensures functionality is good before releasing to public/ customers
+- Also test performance as program increases in complexity
+
+8.4 Unit Testing
+- Mainly defined as testing one party does to determine if they are satisfied with the program produced by a second party.
+- Users fall into this as they may "accept" the program or not, based on how well it functions.
+- A company that contracts software work to another company may also fall into this category: they apply tests to ensure that the contracted work functions to their specifications and desires.
+
+
+
+=========================
+Exercises:
+
+8.1. Explain why it is not necessary for a program to be completely free of defects before it is delivered to its customers.
+- User expectations are (sadly) somewhat low for new software products - there is a certain level of failures that the general user expects to encounter when using a recently-released product that will not dissuade them from further use of the product. This tolerance decreases with the software lifetime, as the user expects it to be more reliable as it matures.
+
+8.5. What is regression testing? Explain how the use of automated tests and a testing framework such as JUnit simplifies regression testing.
+- Regression testing is where you run tests that check previously noted program failures/issues and ensure that they do not return.
+- Automated tests simplify regression testing because your suite of regression tests will fairly steadily increase during development and are prime candidates for automation: You know you will need to test this again at very frequent intervals.
+
+8.9. What are the benefits of involving users in release testing at an early stage in the testing process? Are there disadvantages in user involvement?
+
+The primary benefit has to do with the quantity of users that will try the program: no test team can match the sheer scale of interactions that will be performed adhoc by users, and the value in those interactions is considerable as the user has no prior knowledge of either the program or it's specific details/implementation. This leads to far more cases considered "unusual" or not considered at all by the dev team, which may in fact be fairly common for the regular user.
+
+Disadvantages in user involvement are few, and mainly fall in the realm of potentially exposing company secrets (such as API keys). Perhaps the worst outcome from user involvement would be issues found as a result of those users that are never fixed - this establishes a poor relationship between development group and end user, where the user gets the feeling that the development group does not care much about them. This sullies the user experience.

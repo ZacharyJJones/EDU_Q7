@@ -1,0 +1,118 @@
+Chapter 4 Notes
+=-=-=-=-=-=-=-=
+>> REQUIREMENTS ENGINEERING
+
+System requirements - what it should do - serve the needs of the user so they can accomplish the task promised by the system
+- "user requirements" high-level description / abstraction
+- "system requirements" detailed outline of what it should do, exactly what needs to be implemented
+
+>> 4.1: Functional vs Non-Functional requirements
+
+Functional: services the program provides, how it reacts to inputs, behaviors of the system. Sometimes used to explicitly describe what it should NOT do.
+
+Non-Functional: Not concerned with the specific services delivered by the system. Related to emergent system properties such as reliabilit,y response time, etc. Constraints on services/functions offered by program, such as timing or development process constraints, or standards that must be met. Often applies to the system as a whole, rather than individual features or services.
+- often more critical than functional reqs.
+- 3 main categories: Product reqs (performance, memory required, reliability, security, usability), Organizational reqs (restrictions with HOW the system will be used, dev environment/language/standards, operating environment concerns), and External reqs (factors external to system/dev: meeting regulations, law-related requirements, ethical requirements)
+
+Conflict in requirements:
+- Fuctional requirements should not have any conflicts / opposing purposes.
+- Non-Functional reqs often conflict and interact with other f/non-f reqs.
+
+Traps in defining Non-Functional reqs:
+- Expressed as goals "easy to use" or "good performance". Those are too vague and open to interpretation.
+- It is best to write non-func reqs quantitatively so that they can be objectively tested.
+
+>> 4.2: Software reqs document/specification
+- The official statement of what should be implemented
+- A good standard for a spec is the IEEE definition
+
+>> 4.3: Requirements Specification
+- Ideal is clear and unambiguous, written in natural language
+- Describe both func/nonfunc reqs such that they are understandable by syste musers who don't have detailed tech knowledge
+
+System reqs are an expanded version of user reqs which jumpstart the system design, adding detail and explaining how requirements should be delivered.
+- level of detail should be enough to completely specify a complex system without being concerned about actual implementation details
+
+> Natural language tips for specs
+- use a standard format, makes omissions less likely
+- use consistent language (e.g. "shall" for requirements, "should" for desirable but not critical things)
+- emphasize important points with bold/italic/underline effects
+- avoid jargon or tech terms
+- Associate a rationale with eahc user requirement, "why" it is included.
+
+
+> Structured Specs
+- maintains expressiveness of natural language but limits writer freedoms to ensure consistency and uniformity.
+- Done by defining 1 or more templates which you use to fill out reqs.
+- weakness is in writing difficult requirements in clear and unambiguous ways. Counter this weakness by providing additional information in the form of graphics, tables or diagrams.
+
+>> 4.4: Requirements engineering processes
+
+Feasibility: is it useful?
+Discovering Reqs: elicitation/analysis
+Convert reqs to standard form: specification
+Check reqs vs customer wants: validation
+
+>> 4.5: requirements elcitation/analysis
+- find out what services are needed, system performance, etc.
+- continuous feedback on all fronts, many stakeholders, comrpomises needed
+
+> Discovery
+- gathering information about reqs from all groups involved; direct users, byproduct users, maintenance crew or IT staff, managers, quality control roles.
+
+> Interviewing
+- two core characteristics of a good interviewer:
+ - open-minded/willing to listen
+
+> Scenarios / Use-Cases
+- Descriptions or examples of how users might use the program (and what they'll need from it to make things happen)
+
+> Ethnography
+- Sitting in and watching the target audience do their thing, so you can develop a more nuanced and unsopken understanding of what the users need from the program
+
+>> 4.6: Reuqirements Validation
+- overlaps with analysis, ensure that the requirements are ACTUALLY what the customer wants
+- Looks for validity, consistency, completenes, realism and verifiability within reqs.
+
+>> 4.7: Requirements Management
+- requirements always change, tracking and controlling changes to system reqs is the job here.
+- Formal processes for change proposals and how to manage changing reqs during development
+
+=======================================================
+Exercises:
+
+4.2: Discover ambiguities or omissions in the following statement of requirements for part of a ticket-issuing system: An automated ticket issuing system sells rail tickets. Users select their destination and input a credit card and a personal identification number. The rail ticket is issued and their credit card account charged. When the user presses the start button, a menu display of potential destinations is activated, along with a message to the user to select a destination. Once a destination has been selected, users are requested to input ther credit card. Its validity is checked and the user is then requested to input a personal identifier. When the credit transaction has been validated, the ticket is issued.
+
+Ambiguities/Omissions:
+- procedure for paying for ticket is described twice with different level of detail and language used. 
+- "personal identification number" referenced is unclear whether it is part of the ticketing system, or meant to be part of the credit card usage, or relates to other ID such as drivers license
+- in one case, a start button must be pressed. in another, it does not.
+
+4.3: Rewrite the description from the previous exercise using the structured approach described in this chapter. Resolve the identified ambiguities in an appropriate way.
+
+Template/Structure:
+1. User Action
+2. Result
+3. Next Step
+
+
+Begin Usage:
+1. User presses "start" button on terminal
+2. Ticketing experience launches, showing a set of destination options for user to pick from
+3. User must pick destination
+
+User Picks Destination
+1. User selects a destination from the list provided
+2. Program advances to payment screen
+3. User must enter payment information
+
+User Enters Payment Information
+1. User enters credit card number and card PIN number (if applicable) into terminal
+2. Program validates payment information
+3a. If payment information valid, user prints ticket
+3b. If payment information invalid, user can exit or reattempt payment info entry
+
+User Prints Ticket
+1. no action needed
+2. program prints ticket for user to take.
+3. user interaction complete, program returns to idle/resting state

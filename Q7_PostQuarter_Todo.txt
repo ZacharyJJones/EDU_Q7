@@ -1,0 +1,85 @@
+Post-Class Readings:
+
+DSC:
+Chapter 10 (graph theory)
+>> Answer
+    What is a Graph? What do you mean by Vertex and Edge? Please explain.
+    What is Bipartite Graph? Please explain.
+    What is a path? What do you mean by Shortest Path?
+    What Relaxation in Dijkstra's algorithm? Please write with your understanding.
+    What's the difference between Directed and Undirected Graphs?
+Chapter 11 (trees)
+>> Answer:
+    What is a Tree in Discrete Mathematics? What do you mean by Root and Leaf of a Tree? Please explain.
+    What is Spanning Tree? Please explain.
+    What do you mean by minimum spanning tree?
+    What is Binary Search Tree? Please write with your understanding.
+    What's the difference between DFS and BFS?
+
+CSE:
+Notes #9, ch. 11,12,13 (already did ch 11)
+Notes #10, 17,18,19
+Notes #11, 22,23
+
+
+
+======
+
+DONE
+
+11-25 DSC Week 7
+- Discussion - Asymptotic
+- Assignment - Efficiency
+
+11-26 CSE Chapter Notes 5
+
+11-27 DSC Week 8 & 9
+- Discussion - Recursion
+- Assignment - Recursive
+
+11-28 CSE Chapter Notes 6_7
+
+11-29 CSE Chapter Notes 8
+11-29 CSE Final Exam (great score!)
+
+12-01 AMO Final Exam
+
+==============================
+
+
+12-01 DSC Final Exam
+
+
+CSE:
+Chapter Notes 9
+
+Week 10
+- Discussion - Graph Theory
+- Assignment - Graph Theory
+
+Week 11
+- Discussion - Trees (11/27)
+- Assignment - Tree Traversal (11/27)
+
+
+[CSE] Chapter Notes 10
+[CSE] CBSE
+[CSE] Real World Examples
+
+
+
+[AMO] Auto-Ethnography 2 (Topic / Basic Details Only)
+[AMO] Auto-Ethnography 2 (Outline Only)
+
+
+
+[AMO] Auto-Ethnography 2 (Fill out details, submit)
+
+
+==============================
+
+{{ 11-30 }}
+
+[CSE] Chapter Notes 11
+
+

@@ -1,0 +1,25 @@
+Class 4 - Requirements Engineering
+
+"Descriptions of what a system should do"
+- broken up into functional requirements (features) and non-functional (e.g. login security, performance, uptime requirements). Things the user might not typically be aware of.
+
+Proceess is about translating stakeholder needs into tangible *things* that the software will need to have.
+
+
+Gathering requirements:
+- Good to do face-to-face, to have deeper context and easy followup so things are accurate. Problems are its tougher to schedule and is time-consuming, AND you will likely interact with fewer stakeholders overall, which gives you a narrower view than ideal on what the product needs.
+- "Whate are the key features you expect for doing <x> on this sytem"
+- "How important is <additional feature> for users?"
+- "How would users <do X> in the system?"
+
+Tools for gathering info:
+- Surveys / questionairres: has good reach, good for quantity and evaluating it, BUT difficult to follow up, lacks context, limited responses
+
+The Delphi Technique
+- Anonymous surveys, revise answers based on group feedback, repeat survey until you reach consensus
+
+- Workshops / brainstorming: diverse and immediate input, danger of fewer voices overpowering the rest.
+
+
+
+

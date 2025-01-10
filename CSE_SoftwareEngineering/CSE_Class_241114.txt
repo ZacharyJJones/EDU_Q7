@@ -1,0 +1,96 @@
+CSE Class 11-14 notes
+
+
+>> Availability / uptime
+
+5 nines (99.999%) == only 5.25 minutes of downtime per year
+4 nines (99.99 %) == only 52.5 minutes of downtime per year
+3 nines (99.9  %) == only 8.75 hours of downtime per year
+2 nines (99    %) == 
+
+
+
+
+>> Fault Calculation
+
+mean time between faults?
+
+>> Faults vs Errors
+
+
+>> Redundancy & Diversity
+
+Redundancy ensures continued operation if a part fails (exact same system that can replace failing part)
+Diversity reduces risk of simultaneous failures (different types that can accomplish the same task, e.g. going to work you can drive or take public transport or bike or walk etc.)
+
+> Techniques for Redundancy
+
+Hardware:
+ - Duplicate critical components
+ - RAID data storage arrays use multiple drives to store data redundantly
+
+Software:
+ - Multiple instances of program running simultaneously (such as server load balancers)
+
+Data:
+ - Storing same data in multiple locations
+
+Network:
+ - Multiple network paths for connection
+
+Geographhic:
+ - Deploying systems or data centers to different places in the world
+
+
+>> Safety-Critical Software
+
+Primary: Directly controls hardware, embedded, failures can cause injury or environmental harm (pacemakers, insulin pumps, etc)
+Secondary: Indirectly impactts safety, failures may lead to design errors or treatment issues
+
+Accidents: unplanned events
+Hazard: Condition with potential to cause accident
+Damage: harm or loss caused by accident
+Hazard Severity / Probability: Minor/Serious/Catastrophic + probability
+Risk: Combined assessment of severity + probability
+
+>> Security
+
+Terms:
+- Asset - something that needs protection
+- Exposure - possible harm
+- Vulnerability - weakness in computer system
+- attack - exploitation of a vulnerabiity
+
+
+Threat Types:
+- Confidentiality (gaining unauthorized information or intercepting sensitive emails)
+- Integrity (Altering records, infecting a database, data inaccuracy / corruption)
+- Availability (DDOS attack, system taken down)
+
+
+Enhancing Security
+- Vulerability avoidance (strong encryption)
+- Attack Detection / Neutralization (access restriction, component shutdown)
+- Exposure Limitation & Recovery (minimize damage and recover faster, backups)
+
+
+Risk Types:
+- Preliminary: initial security requirements, environmental risk
+- Life-Cycle: design and technology-related risks
+- Operational: user interface risks, protections neeeded for user errors
+
+
+
+>>>> Maintainable Code
+
+Descriptive naming conventions
+Context with comments
+Single responsibility principle - each function should do one thing
+Reuse code often
+Break up long functions into modules
+Error handling
+
+
+
+
+

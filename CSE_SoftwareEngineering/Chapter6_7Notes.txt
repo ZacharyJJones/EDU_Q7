@@ -1,0 +1,131 @@
+Chapter 6 Notes
+=-=-=-=-=-=-=-=
+Architectural Design
+- How to organize a system + design the overall structure of that system
+- Incremental design of architectures is usually not successful
+
+The two Levels of Abstraction for architecture
+1. "Small" -- individual programs and how they decompose into components
+2. "Large" -- complex systems that include other systems/programs/components, distributed over different computers.
+
+Benefits of architecture:
+- Stakeholder communication: it is a high level presentation of the system
+- System Analysis: early analysis is needed to define proper architecture, earns dividends down the line
+- Large scale reuse: having a solid architectural design leads to find ways in using it again for similar purposes.
+
+== 6.1 Architectural design decisions
+- Creative process that will depend on architect, system-to-be-designed, and specific requirements.
+- Useful to think of as a series of decisions rather than activities
+
+
+== 6.2 Architectural Views
+
+Core views to consider are:
+1. Logical: key abstractions as objects or classes, how system reqs relate to these entities
+2. Process: system processes at runtime and how they interact
+3. Development: decomposition of software into components for implementation
+4. Physical: hardware and software distribution across system processors
+
+Detailed architectural views are not always worthwhile! They fall into the category of documentation that all too often quickly becomes outdated.
+
+== 6.3 Architectural Patterns
+
+Layered Architecture
+- supports incremental development by decoupling the way that data is presented and interpreted from the data itself
+
+Repository Architecture
+- Pertains to systems where one component produces data and another consumes or uses it. Examples being one program that produces 3d models and another that translates them into instructions for a 3d printer.
+- Components must be designed around the agreed-upon repository model, but as a trade-off they do not need to explicitly transmit data between themselves.
+
+Client-Server Architecture
+- Servers are agnostic as to what clients exist, and clients must be aware of servers they can call upon.
+
+Pipe And Filter Architecture
+- processing steps are all implemented as transformations of data
+- Input flows through system until it becomes an output
+
+
+== 6.4 Application Architectures
+- Generalized "base" architectures can be used and adapted to fit more specific needs. Most business functions are not unique, and even the most unusual are still common when seen as a part of the industry they pertain to.
+
+Transaction Processing Systems
+- Process user actions relating to a database
+- "Transaction" as in database terms refers to waiting on finialization of changes until everythig is confirmed complete. Sometimes, TP systems do not actually involve database changes, and thus do not need to wait for the technical database transaction to occur.
+
+Information Systems
+- Controlled access to a large base of information (library catalog, flight timetable, etc)
+- Often found as web-based systems, utilized through a browser.
+
+Language Processing Systems
+- Translate a natural or artificial langguage into another representation.
+- Code compilers are here, as are transpilers or conversions from xml schema into database commands.
+
+
+=======================================================
+Chapter 7 Notes
+=-=-=-=-=-=-=-=
+Design & Implementation
+
+
+== 7.1 Object-oriented Design using UML
+
+System Context & Interactions
+- sys context == model the describes other systems in ecosystem of the one being developed.
+- interaction model == shows possible system interactions with it's environment
+
+Goals are to show relationships between system elements (typically in cardinality form, 1 of these interacts with 1 or more of these, etc.) and to show what actions each major element can take (use case diagram, each system as a stick figure connected to actions they take)
+
+Object class identification
+- use-case models are great ironing out details of classes and what they *do*
+- domain knowledge of what real-world things are involved will be of massive help in defining objects
+
+Design Models
+- minimize the models needed while carefully assessing what levels of detail are needed to properly describe the system
+- Two main model types:
+  1. Structural models: static structure such as object classes and relationships
+  2. Dynamic models: system interactions and service requests
+- Useful model types to add detail to initial drafts:
+ - subsystem models: grouping objects into coherent subsystems that operate together
+ - sequence models: sequences of object interactions
+ - state machine models: shows how state changes affect data in response to events within system
+
+
+== 7.2 Design Patterns
+- best thought of elegant solutions to common problems, formed as a result of accumulated wisdom and experience.
+
+== 7.3 Implementation Issues
+
+Reuse
+- Different core levels of reuse:
+ 1. abstraction: using knowledge of successful abstractions in designing new software, such as implementing design patterns
+ 2. object: directly reuse object classes from a library. Depends highly on having near-usable libraries to pull from and potentially update.
+ 3. component: collections of objects that operate together to provide a service. Frameworks are good examples for this.
+ 4. system: reuse entire application systems, adding/modifying code or reconfiguring the application. Generic "Commertical off-the-shelf" programs (COTS) are in this category
+
+Configuration management
+- The name given to the process of managing a changing software system
+ - Incorporates version control, system integration (what component versions are creating the system) and issue tracking.
+
+Host-Target Development
+- Applies to 99% of software: when it is developed on one machine and ran on another.
+- Gets more interesting when operating systems or critical hardware differences get in the way.
+
+
+== 7.4 Open-Source Development
+- Take care to note license details when including open-source components in your software, as you will need to account for their restrictions at all times.
+
+
+=======================================================
+Exercises:
+
+6.1. When describing a system, explain why you may have to design the system architecture before the requirements specification is complete.
+
+You have to do this first because you will find additional requirements of your system through the process of designing the architecture - the ways that components will communicate or function with/without each others' influence is not likely to be fully understood before the architecture is done.
+
+6.3. Explain why design conflicts might arise when designing an architecture for which both availability and security requirements are the most important non-functional requirements.
+
+The likely design conflicts for this scenario has to do with the hardware needed to prioritizing one or the other. Availability can be solved by having backup servers in different locations, such that one or more is always usable. This conflicts with security prioritization in that increasing the number of locations increases the number of ways where your security can be breached and nefarious access is gained. Security also relates to access restrictions which - while mostly invisibile to the users - could also result in less information or functions being available to those users.
+
+7.9. Using examples, explain why configuration management is important when a team of people are developing a software product.
+
+Configuration management is important so that developers do not waste work by completing the same tasks / resolving the same bugs/issues, and to maximize visibility and access for the code such that next tasks needed are clear.

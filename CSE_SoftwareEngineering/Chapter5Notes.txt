@@ -1,0 +1,117 @@
+Chapter 5 Notes
+=-=-=-=-=-=-=-=
+System Modeling
+- Deliberately simple/abstract to enable discussion of broad/key points
+
+Models are used in 3 major ways:
+- Facilitate system discussion
+- Document existing system
+- System description used to generate an implementation
+
+Specific perspectives are used to get complete view of system:
+>> External (context/environment of system)
+>> Interaction (interactions between system components or system <-> environment)
+>> Structural (organization of system or structure of processed data)
+>> Behavioral (how it responds to events)
+
+
+============================
+Notes:
+
+== 5.1: Context Models
+
+Describes system boundaries and where interactions with other systems can take place
+- Good to plan around, weigh pros and cons of avoiding data duplication or prioritizing system speed / reliability.
+
+Shows activities and how control flows from one activity to the next
+
+== 5.2 Interaction Models
+- Outline component interactions/communications and show where they may be lacking
+
+Use Case Modelling
+- Diagram highlights specific tasks that need to be accomplished by user, and how system will facilitate executing those tasks
+- Simple overview of interactions, with more detail needing to be provided elsewhere: simple text explanation, table or sequence diagram... depends on what is most appropriate
+
+Sequence Diagrams
+- Describes flow of actions between parts of system. =
+- Not every action must be included (many will depend upon implementation)
+
+== 5.3 Structural Models
+- Illustrates system organization in terms of components that make up the system.
+
+Class Diagrams
+- Describe object-oriented systems to describe classes and relationships between them.
+- Broadly represents real-world things, but as implementation progresses is often broken down into more maintainable components.
+
+Generalization
+- Inheritance, basically
+- Describes how different components inherit behavior from broader descriptions
+- Uses an arrowhead pointing upward to the base class
+
+Aggregation
+- Similar to generalization, but indicates where one thing has multiple components that make up the whole. A different shape (diamond or other) is used to show this.
+
+== 5.4 Behavioral Models
+
+Two main types of stimulus that drive behavior
+1. Data - some data arrives that needs processing
+2. Events - some event happens that triggers system action. Might have associated data, might not.
+
+Data-Driven Modelling
+- Shows sequence of actions involved in processing the input (such as describing what a function does)
+- Structured like activity diagrams
+
+Event-Driven Modelling
+- Based on assumption that the system has finite states and events that transition from state to state.
+- Don't show or describe flow of data in system, may include computation information carried out in each state.
+- Rounded rectangles represent states, labeled arrows represent stimuli forcing state transition.
+- Can describe some action that occurs when in each state
+- Can draw a "super" state that encapsulates smaller states, to describe the general operational goal for that set of states.
+
+== 5.5 Model-Driven Engineering
+- Approach where models (not programs) are the principal work output. Like pseudocode, aims to focus more on princples of the development rather than implementation details
+
+Model-Driven Architecture
+- 3 core types
+ 1. Computation Independent Model (CIM): important domain abstractions / domain models, uses different perspectives.
+ 2. Platform Independent Model (PIM): system operation without reference to implementation
+ 3. Platform Specific Models (PSM): transformations of PIM for each target platform
+- Friction between this method and agile development: lots of up-front modeling which contradicts agile concepts.
+
+Executable UML
+- core notion of model-driven engineering is complete automation of transforming models into code, achievable with Executble UML (xUML)
+- meant to support and document software design, not meant as a programming language.
+
+
+============================
+Exercises:
+
+5.1. Explain why it is important to model the context of a system that is being developed. Give two examples of possible errors that could arise if software engineers do not understand the system context.
+
+	1. Avoid costs in producing / maintaining functions that other available systems already provide - don't duplicate functions, reuse reuse reuse!
+	
+	2. Make informed decisions about what your system needs in order to meet reliability / security / usability standards. For example, relying on other systems can reduce your load of work BUT may cause reliability issues if services you depend on are shut down or taken down for maintainence.
+
+
+
+5.6 Look carefully at how messages and mailboxes are represented in the e-mail system that you use. Model the object classes that might be used in the system implementation to represent a mailbox and an e-mail message.
+
+
+Mailbox:
+- collection of email messages in mailbox
+- collection of tags/ids representing folders for organization
+- collection of special rules for automated tag application / sorting
+
+- create_email() / send_email()
+
+Email Message:
+- Title
+- Sender info
+- Addressee info (including cc, bcc, etc. for simplicity)
+- Email body text / content
+- Attachment(s)
+- Tags (applied by user, used for mailbox sorting / flagging)
+
+- delete()
+- reply() / forward()
+

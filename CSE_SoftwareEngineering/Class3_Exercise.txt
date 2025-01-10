@@ -1,0 +1,31 @@
+== High:
+
+Fix Bug: Auto-Playback Issues
+ - Low effort and common complaint -> Lowers quality of app, if people don't enjoy the app, they won't use it.
+
+Fix Bug: App Crashes on Older Android Devices
+ - Med effort but common complaint -> If an app I was using regularly crashed, I would simply stop using it. Crashes are the worst sin to deliver to your end user, they are ugly and shocking.
+
+Add New Feature: User Profile Personalization
+ - common request and makes users feel more attached to the application. Medium effort is somewhat more than ideal, but improving app quality and experience makes a great impact for users.
+
+
+== Med:
+
+Expand Library: International Content
+ - Higher business value than algorithm improvements, but not more important than good features and fixing crashes
+
+Improve Recommendation Algorithm
+ - A bad algorithm is a headache, but the app needs to work well in other respects before optimizing this feature further.
+
+Add Support for Offline Viewing
+ - Sometimes a nice feature but not the most important, since internet access is usually pretty available. Considering worldwide reach where internet availablility might be lower than in USA, is a solid feature 
+
+
+== Low:
+
+Add Feature: Watch Party
+ - Even though shareholders want this, we don't need to prioritize spending time on it when there are many easy alternative ways for users to organize watch parties -- streaming/screenshares on messaging apps, or agreeing to watch at the same time, or getting together in person and watching something.
+
+Upgrade Streaming Quality: 8K Content
+ - Very small slice that uses or could even recognize quality level. NOT important for foreseeable future.

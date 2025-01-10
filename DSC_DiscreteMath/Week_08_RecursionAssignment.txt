@@ -1,0 +1,50 @@
+Algorithm Steps for Binary Search Using Recursion
+- Zachary Jones
+
+
+Input will be:
+1. a list of values to search within
+2. the value to search for
+3. index bounds to search within
+
+Output will be the index in list of the searched value
+
+Algorithm Steps
+1. Find midpoint of list to search
+ 1a. if min and max are different numbers, use math to find midpoint
+ 1b. otherwise, set midpoint as min bound
+2. Compare value to list element at midpoint index
+3. If value equals midpoint element, return index of midpoint
+4. If list size is 1, return failure value of -1
+4. If value is greater than the midpoint, recurse using slice of list from index+1 to end of list index
+5. If value is less than the midpoint, recurse using slice of list from 0 to index-1
+
+
+=================== Example:
+       min               max
+        v                 v
+list: [ 0, 1, 2, 3, 4, 5, 6 ]
+value: 2
+bound_min: 0
+bound_max: len(list)-1, which is 6
+  call_method(list, value, 0, 6)
+
+midpoint: index 3 == min + floor((max-min) / 2) == 0 + floor((6 - 0) / 2)
+  2 < 3, therefore recurse using slice from index 0 to index 2
+  
+  call_method(list, value, 0, 2)
+
+ min   max
+  v     v
+[ 0, 1, 2, 3, 4, 5, 6 ]
+midpoint: index 1 == 0 + floor((2-0)/2)
+  2 > 1, therefore recurse using slice from index 2 to index 2
+
+  call_method(list, value, 2, 2)
+
+    min & max
+        v
+[ 0, 1, 2, 3, 4, 5, 6 ]
+midpoint: index 2 == 2 + floor((2-2)/2)
+  2 == 2, so return index of midpoint
+

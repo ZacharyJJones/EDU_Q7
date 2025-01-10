@@ -1,0 +1,15 @@
+Class 5 - System Modeling
+
+"Understand why graphic models are used to describe software systems"
+
+UML (Unified Modeling Language) is what is used by most everyone uses. Model types include:
+- Context Models - shows how something exists and interacts with many other systems
+- Activity diagram - 
+- Interaction models - user case modeling / action sequence diagrams
+- Example sequence diagram - shows potential interactions & flow between user and various system functions/sections, shows how data is passed around, with top->bottom timeline flow
+- State Machine Diagram - 
+
+UML class diagram makeup:
+1. Top is class name
+2. Middle is class attributes/properties
+3. Bottom is class functions

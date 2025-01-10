@@ -1,0 +1,53 @@
+==== Functions ====
+
+A function is an operation that maps each each element of a est to another value / element-in-another-set.
+
+
+Functions like "f: A -> B" can be defined as a relation of one set to another. A relation of A to B is just a subset of "A x B" (cartesian product)
+- For such a function, you say that "A" is the "domain of f" and B is the "codomain" of f.
+- For "f(a) = b", "b" is the "image" of a, and "a" is the "preimage" of "b". The "range" of "f" is the set of all images of elements of "A".
+
+
+== "One-To-One" and "Onto" functions
+Some functions nevver assign the same value to two different domain elements. Such a function is "one-to-one". A function is known as an "injunction" IF AND ONLY IF f(a) == f(b) implies a=b.
+- one-to-one functions can be referred to as "injective"
+
+An Onto function (surjection) is when in f(a)=b every value of b is mapped-to from a. That is, every value of b is assigned something from a during the function.
+- Consider a function that assigns workers (elements "a" from set "A") jobs (elements "b" from set "B"). The function is "ONTO" if for every job, there is a worker (one or more) assigned to that job.
+ 
+The factors of "One-To-One" and "Onto" are not exclusive. They are two properties which are both true or false for every given function.
+
+A function which is both at the same time is called "bijective". Also called "one-to-one correspondance"
+
+
+== Inverse Functions & Compositions of Functions
+
+Considering a function which is 1-1-onto from A to B, you can define a function from B to A that reverses that mapping. That is called the "inverse" of the function. E.g. f(a)=b <==> f^-1(b)=a
+
+Functions which are NOT 1-1-onto cannot have an inverse be defined.
+
+Functions which can have an inverse definition are called "invertible", otherwise it is "not invertible"
+
+
+
+- Composition
+
+Format here is just like in algebra classes.
+
+(f _o_ g)(a) = b <==> f(g(a)) = b
+
+
+
+== Graphs of functions: cartesian products / ordered pairs of elements a and b
+
+== Discrete math uses floor and ceiling functions as well with definitions. Those are like square brackets but floor() is missing the top bends and ceiling() is missing the bottom bends.
+
+== Partial Functions
+Some functions must omit a range because it otherwise would loop infinitely, overflow or not produce correct elements for those values.
+
+A partial function "f" from "A" to "B" assigns to only a subset of each element in A. "A" is the domain "f", "B" is the codomain. "f" is "undefined" for elements in A that are not in that subset (domain of definition).
+
+A "Total Function" is one where the domain of defintion is equal to A. (that is, no elements are left out. The "subset" being evaluated is equal to the set itself.)
+
+Notation for partial functions is the same as for total (normal) functions
+

@@ -1,0 +1,61 @@
+Chapter 3 Notes - Agile Software Development
+-------------------------------
+
+Chapter Notes
+-------------------------------
+
+Agile as incremental development milestones VS waterfall as a planned-and-executed-in-one-swoop. Agile is more resilient to inevtitable business requirement changes, whereas waterfall might end a project only to find that the current demands are significantly different than when it began.
+
+The overhead cost of waterfall was well-suited to long and highly inter-team cooperative styles of large companies working on critical systems. Take this strategy with a smaller business, and now the overhead cost is actually the majority of the work.
+
+The pressure of agile deliverables hurts the simplicity and QOL that developers would normally add to their projects over time.
+
+Contractual differences in agile is "paying for development time" vs "paying for features delivered". In many ways, requirements or specifications are informally created as part of the 'subject to change' nature of agile workflows
+
+[3.2]
+
+In agile, plans are purposefully iterated upon alongside the software itself
+
+Documentation is ideally the code itself (internal), often "spikes" for completeness at times of release or sharing
+
+[3.3] Extreme Programming
+
+Features and requirements are framed as "user stories" or scenarios in which a user would actually make use of the program.
+
+This paradigm tackles technical debt by insisting on and encouraging continuous refactoring from the development team
+
+When it comes to testing agile projects, the literature of what needs to be tested and what the expectations for those tests are is written alongside the tests themselves, when they are created.
+
+Typically developers will be involved in writing the tests for their work. This is fine sometimes but often things will be missed due to the creator's familiarity with their own work.
+
+Pair programming is good because it released developers from their artistic software-egos and allows everyone to feel collective ownership and responsibility for the code.
+
+[3.4]
+
+[3.5]
+agile in large projects
+
+agile can function well even in large projects / organizations. At a certain point that 1 large group can be identified as multiple smaller groups. In the same way of thinking, there will always be disjoint places in an organization where the agile methodology can be applied well.
+
+
+
+
+
+Exercises to complete
+---------------------
+
+
+3.1. Explain why the rapid delivery and deployment of new systems is often more important to businesses than the detailed functionality of these systems.
+ - The rapid dellivery and deployment is often more important because real-world factors easily and often change, which can cause issues or even invalidate work entirely.
+
+3.3. When would you recommend against the use of an agile method for developing a software system?
+- Agile is not suited for strict fields (healthcare, aircraft) or highly regulated environments (finance, law) because significant planning is fully necessary for those fields, and putting in development time without a clear idea of how the requirements will be met is a recipe for wasted work.
+
+3.4. Extreme programming expresses user requirements as stories, with each story written on a card. Discuss the advantages and disadvantages of this approach to requirements description.
+- Focus on tangible features gives a greater sense of progress
+- Disadvantage: customer experience does not design databases, to mean that technical or backend work is given less visibility and may be prioritized loewr.
+- Disadvantage: feature suggestions require creative writing, rather than "I can't save when I quit" you must use more words to say the same thing.
+
+
+
+

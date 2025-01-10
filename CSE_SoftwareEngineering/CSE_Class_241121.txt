@@ -1,0 +1,39 @@
+CSE_Class_241121
+
+Todo: check my grades & assignment feedback
+> Ask Ix about turning in the remaining late work (there's a little more time to turn in if I do)
+
+
+Component Based Software
+> Develop for purpose of reuse: generalized components or services, using existing systems and components to build new applications
+
+Component Principles:
+- Standardized: Follows a standard model of construction among components
+- Independent: Can be deployed without other components
+- Resuable: 
+- Deployable: self-contained that operate independently
+- Documented:
+
+Service-Oriented Architecture Principles
+- Interoperability: Works across platforms and languages
+- Loose Coupling: minimal dependencies
+- Abstraction: You don't need to know how they work, only how to use them
+- Granularity: Built for discrete business functions
+
+
+
+
+Topic Review for Final Exam:
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+DevOps Concepts
+
+CI/CD/CD
+- Continuous Integration - When code is committed to repositories, runs integration tests on a new build to ensure things are always working good
+- Continuous Deployment - automated deployment based on check-ins
+- Continous Delivery - same as above with manual approval needed
+
+AWS Variant of CICD: 
+- basically the same but with a focus on microservices
+
+message Ix on canvas, outline which chapter notes I need to submit still, 

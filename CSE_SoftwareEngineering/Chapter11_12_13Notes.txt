@@ -1,0 +1,82 @@
+Chapter 11 Notes
+=-=-=-=-=-=-=-=-=
+- System Failures == Normal business is impossible
+- Users reject systems that are unreliable, unsafe, or insecure
+- Failures cost a lot
+- Data loss is worst case scenario for most applications.
+
+11.1 Dependability Properties 
+(they are the later section titles of this chapter)
+
+Dependability is not a factor that is useful to express numerically. Has more to do with the user's feelign that the program will work without issue.
+
+Other factors:
+- Repairability: ability to overcome system failures
+- Maintainability: ability to accomodate new requirements
+- Survivability: ability to continue service while partially disabled or under attack
+- Error tolerance: extent that system can handle or avoid errors from user input or other malformed data.
+
+
+The relationship between dependability and cost is nonlinear - cost increases exponentially.
+
+
+11.2 Availability & Reliability
+- Available: probability it will be running and usable at any given point in time
+- Reliable: probability over time that it will correctly deliver expected services
+
+Good to express as numbers 0-1:
+- Availability: 0.9 == 90% available over given time period. 0.999 == 99.9% available over given time period.
+- Reliability: represents failure rate, so 0.01 would be 1 in every 100 occurances cause a failure. 0.0001 == 1 in 10,000 causes failure
+
+Availability % can be more or less relevant depending on when the system is down. Consider that a short period of downtime when many people want to use it is typically worse than a longer period when very few people want to use it.
+
+
+11.3 Safety
+- Safe: how likely the system is to damage people/it's environment
+
+Degrees of safety-critical software:
+- Primary: software embedded as controller, malfunctions will cause human injury or environmental damage.
+- Secondary: can indirectly result in an injury. bad calculations resulting in faulty designs that later cause injury also fall in this category.
+
+
+
+
+11.4 Security
+- How likely the system can resist intrusions (deliberate or otherwise)
+
+Main security threats to system/data:
+1. confidentiality
+2. integrity
+3. availability
+
+
+Chapter 12 Notes
+=-=-=-=-=-=-=-=-=
+
+
+
+Chapter 13 Notes
+=-=-=-=-=-=-=-=-=
+
+
+
+=====================
+Exercises
+
+11.2. What are the most important dimensions of system dependability?
+
+This can depend a lot on the system in question. Generally, Safety, Reliability and Error Tolerance will be the most important.
+
+=====
+
+12.2. Explain why the risk-based approach is interpreted in different ways when specifying safety and security.
+
+12.8. Explain why there is a need for both preliminary security risk assessment and life-cycle security risk assessment during the development of a system
+
+
+
+=====
+
+13.1. Give four reasons why it is hardly ever cost effective for companies to ensure that their software is free of faults.
+
+13.3. Give two examples of diverse, redundant activities that might be incorporated into dependable processes.
